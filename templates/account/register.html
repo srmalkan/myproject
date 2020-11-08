@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% load custom_tags %}
+{% block title %}Create an account{% endblock %}
+{% block content %}
+<div class="container shadow">
+    <div class=""> 
+        <div class="card-body">
+            <h1>Create an account</h1>
+            <hr>
+            <br>
+            <div class="row h-100">
+                <div class="col-6 my-auto">
+                    <img src="{% static 'mindmap.png' %}" class="w-100 shadow-sm"/>
+                </div>
+                <div class="col-6 border-left">
+                    <form action="." method="POST">
+                        {% csrf_token %}
+                        {% for feild in user_form %}
+                        <div class="form-group">
+                            {{ feild.label_tag }}
+                            {{ feild|add_classes:'form-control' }}
+                        </div>
+                    {% endfor %}
+        
+                        <p><input type="submit" class="btn btn-primary" value="Create my account"></p>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+    
+{% endblock %}

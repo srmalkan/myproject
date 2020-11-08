@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% load custom_tags %}
+{% block title %}Create an account{% endblock %}
+{% block content %}
+    <div class=""> 
+        <!-- <div class="card-body"> -->
+            <!-- <img src="{% static 'landing.jpg' %}" class="w-100 m-0"/> -->
+        <!-- </div> -->
+        <div class="jumbotron text-white vh-100 " style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 100%), url(https://venngage-wordpress.s3.amazonaws.com/uploads/2019/04/21-Mind-Map-Templates-To-Help-You-Visualize-Ideas-1.jpg);background-repeat: no-repeat;background-size:100% 100%;">
+            <div class="">
+                <div class="container">
+                    <h1 class="display-4">Hello, world!</h1>
+                    <br>
+                    <h3 class="">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</h3>
+                    <hr class="my-4 bg-white" >
+                    <h3>It uses utility classes for typography and spacing to space content out within the larger container.</h3>
+                    <br>
+                    <br>
+                    <p class="lead">
+                      <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Login</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

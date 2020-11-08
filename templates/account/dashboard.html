@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %} Dashboard {% endblock %}
+
+{% block content %}
+<br>
+<div class="container shadow">
+    <div class="">
+        <div class="card-body">
+            <h2>Welcome back, Soumya</h2>
+            <hr>
+            <br>
+            <div class="card shadow-sm">
+                <div class="card-header bg-white">
+                    Please enter your text below
+                </div>
+                <div class="card-body">
+                    <form>
+                        <textarea name="" id="" cols="30" rows="10" class="w-100 bg-light">
+                        </textarea>
+                    </form>
+                </div>
+                <div class="card-footer text-center bg-white">
+                    <button class="btn btn-primary">Generate Mind map</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+{% load custom_tags %}
+{% block title %}Log-in{% endblock %}
+
+{% block content %}
+<br>
+<div class="container shadow">
+    <div class="" >
+        <div class="card-body">
+            <h1>Login Here</h1>
+            <hr>
+            <br>
+            <div class="row h-100">
+                <div class="col-6 my-auto">
+                    <img src="{% static 'mindmap.png' %}" class="w-100 shadow-sm"/>
+                </div>
+                <div class="col-6 border-left">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {% for feild in form %}
+                            <div class="form-group">
+                                {{ feild.label_tag }}
+                                {{ feild|add_classes:'form-control' }}
+                            </div>
+                        {% endfor %}
+                        <p><small><a href="{% url 'password_reset' %}">Forgot Pasword?</a></small></p>
+        
+                        <input type="submit" class="btn btn-primary" value="login">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
